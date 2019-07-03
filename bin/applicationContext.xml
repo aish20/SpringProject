@@ -9,12 +9,19 @@
 
 	<!-- Define your beans here -->
 	
-	<bean id ="myCoach" 
-	
-	class ="com.org.springdemo.TrackCoach">
-	
+	<bean id = "myFortune"
+	class = "com.org.springdemo.HappyFortuneService">
 	</bean>
+	
+	
+	<bean id ="myCoach" 
+	        class ="com.org.springdemo.BaseballCoach">
+	
+	<!--  set up the constructor injection -->
 
+        <constructor-arg ref="myFortune">
+    </constructor-arg>
+</bean>
 </beans>
 
 

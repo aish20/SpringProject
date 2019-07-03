@@ -8,4 +8,10 @@ public class TrackCoach implements Coach {
 		return "Run around 5 km daily";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		
+		return "Today you are not ready";
+	}
+
 }
