@@ -2,26 +2,37 @@ package com.org.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringHelloApp {
+public class SetterDemoApp {
 
 	
-	// Constructor Injection
+	// Setter Injection
+	
 	public static void main(String[] args) {
-		// load the configuration file (Basically creating the spring container)
+		
+		//load the configuration file 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		// retrieve bean from container
-		// mention the bean id here which is mention in the myCoach
-		Coach theCoach = context.getBean("myCoach",Coach.class);
+		// retrieve bean from the spring conainer
 		
-		//call methods on the bean 
+		CricketCoach theCoach = context.getBean("myCricketCoach",CricketCoach.class);
+		
+		// call methods on the bean 
 		
 		System.out.println(theCoach.getDailyWorkout());
 		
-		// let's call the our new methods for fortunes
 		System.out.println(theCoach.getDailyFortune());
+		
+		// call our new methods to get the literal values
+		
+		System.out.println(theCoach.getEmailAddress());
+		
+		System.out.println(theCoach.getTeam());
+		
 		//close the context
 		context.close();
+		
+		
+
 	}
 
 }
