@@ -25,4 +25,23 @@ public class BaseballCoach implements Coach{
 	return fortuneservice.getFortune();
 	}
 
+	//add an init method 
+	
+		public void doMyStartupStuff()
+		{
+			System.out.println("I am init");
+		}
+		
+		
+		//add a destroy method
+		
+		public void destroyMethod()
+		
+		{
+			System.out.println("Destroy Method");
+			
+		}
+
+	
+	
 }
